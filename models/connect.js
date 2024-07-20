@@ -1,3 +1,6 @@
 const mongoose=require('mongoose');
 //asynchronus
-mongoose.connect("mongodb://127.0.0.1:27017/mern9").then(()=>console.log("connection is established")).catch((err)=>console.log("err.message")) 
+
+require('dotenv').config();
+
+mongoose.connect("mongodb+srv://nehakumari0673949:neha444@cluster0.2coyw3n.mongodb.net/bookstore?retryWrites=true&w=majority&appName=Cluster0").then(()=> console.log("db connected")).catch((err)=>console.log(err))
